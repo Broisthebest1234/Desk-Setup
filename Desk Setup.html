@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Desk Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f2f5;
+    color: #222;
+}
+header {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+header h1 { font-size: 3em; margin-bottom: 15px; }
+header p { font-size: 1.2em; max-width: 700px; margin: 0 auto; }
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background: #fff;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.button:hover { background: #e0f7ff; }
+
+section { padding: 70px 20px; text-align: center; }
+.features { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+.card { background: white; padding: 35px; border-radius: 12px; width: 280px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s;}
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15);}
+.card h3 { margin-bottom: 12px; color: #007bff; }
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.95em;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Perfect Desk Designs</h1>
+    <p>We create clean, organized, and beautiful desk setups for anyone, at any budget.</p>
+    <a href="#contact" class="button">Get Your Custom Design</a>
+</header>
+
+<section>
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+        <div class="card">
+            <h3>Any Budget</h3>
+            <p>From simple and affordable to premium workspaces — we work with your budget.</p>
+        </div>
+        <div class="card">
+            <h3>Fully Custom</h3>
+            <p>Personalized for your space, style, and goals.</p>
+        </div>
+        <div class="card">
+            <h3>Easy to Build</h3>
+            <p>Step-by-step guide included to build your setup quickly and efficiently.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="background:#e9f7ff; padding:70px 20px;">
+    <h2>Contact Us</h2>
+    <p>Click the button below to fill out our contact form — we’ll get back to you quickly!</p>
+    <a href="https://forms.gle/qhmoXrTbdrFSWx7NA" target="_blank" class="button">Fill Contact Form</a>
+</section>
+
+<footer>
+    © 2026 Perfect Desk Designs | Clean. Simple. Functional.
+</footer>
+
+</body>
+</html>
