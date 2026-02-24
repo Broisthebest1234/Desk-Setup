@@ -3,86 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perfect Desk Designs</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Desk Setup Builder</title>
+
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #f0f2f5;
-    color: #222;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
 }
+
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+  padding: 60px 20px;
 }
-header h1 { font-size: 3em; margin-bottom: 15px; }
-header p { font-size: 1.2em; max-width: 700px; margin: 0 auto; }
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 35px;
-    background: #fff;
-    color: #007bff;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
 }
-.button:hover { background: #e0f7ff; }
 
-section { padding: 70px 20px; text-align: center; }
-.features { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 35px; border-radius: 12px; width: 280px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s;}
-.card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15);}
-.card h3 { margin-bottom: 12px; color: #007bff; }
+header p {
+  font-size: 18px;
+  opacity: 0.8;
+}
 
+/* SECTION */
+.budget-section {
+  padding: 60px 20px;
+}
+
+.budget-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.reason-card {
+  max-width: 750px;
+  margin: 20px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.02);
+}
+
+.reason-btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reason-btn:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+.reason-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 25px;
+}
+
+.reason-content ul {
+  text-align: left;
+  padding: 20px 0;
+  line-height: 1.8;
+}
+
+.reason-content li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
 footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 0.95em;
+  padding: 40px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Perfect Desk Designs</h1>
-    <p>We create clean, organized, and beautiful desk setups for anyone, at any budget.</p>
-    <a href="#contact" class="button">Get Your Custom Design</a>
+  <h1>Build Your Dream Desk Setup 💻✨</h1>
+  <p>No matter your budget, your setup can look clean, powerful, and impressive.</p>
 </header>
 
-<section>
-    <h2>Why Choose Us?</h2>
-    <div class="features">
-        <div class="card">
-            <h3>Any Budget</h3>
-            <p>From simple and affordable to premium workspaces — we work with your budget.</p>
-        </div>
-        <div class="card">
-            <h3>Fully Custom</h3>
-            <p>Personalized for your space, style, and goals.</p>
-        </div>
-        <div class="card">
-            <h3>Easy to Build</h3>
-            <p>Step-by-step guide included to build your setup quickly and efficiently.</p>
-        </div>
-    </div>
-</section>
+<section class="budget-section">
+  <h2>Choose Your Budget</h2>
 
-<section id="contact" style="background:#e9f7ff; padding:70px 20px;">
-    <h2>Contact Us</h2>
-    <p>Click the button below to fill out our contact form — we’ll get back to you quickly!</p>
-    <a href="https://forms.gle/qhmoXrTbdrFSWx7NA" target="_blank" class="button">Fill Contact Form</a>
+  <!-- $100-300 -->
+  <div class="reason-card">
+    <button class="reason-btn">$100–$300 • Clean & Minimal</button>
+    <div class="reason-content">
+      <ul>
+        <li>24" 1080p monitor with thin bezels</li>
+        <li>Simple keyboard (membrane or entry mechanical)</li>
+        <li>Wired gaming mouse</li>
+        <li>Compact USB speakers</li>
+        <li>Large clean mousepad</li>
+        <li>Basic cable clips for organization</li>
+        <li>Soft desk lamp for clean lighting</li>
+      </ul>
+      <p>
+        Even with a smaller budget, matching colors and clean organization
+        make your desk look intentional and modern — not cheap.
+      </p>
+    </div>
+  </div>
+
+  <!-- $300-500 -->
+  <div class="reason-card">
+    <button class="reason-btn">$300–$500 • Clean Gamer Setup</button>
+    <div class="reason-content">
+      <ul>
+        <li>24–27" 144Hz IPS monitor</li>
+        <li>Mechanical RGB keyboard</li>
+        <li>Lightweight gaming mouse</li>
+        <li>Better speakers or gaming headset</li>
+        <li>LED strip behind desk</li>
+        <li>Monitor arm</li>
+        <li>Cable management box</li>
+      </ul>
+      <p>
+        This budget makes your setup feel powerful and smooth.
+        With soft RGB glow and hidden cables, it looks like a creator desk.
+      </p>
+    </div>
+  </div>
+
+  <!-- $500-700 -->
+  <div class="reason-card">
+    <button class="reason-btn">$500–$700 • Premium Clean Look</button>
+    <div class="reason-content">
+      <ul>
+        <li>27" 1440p 144Hz monitor</li>
+        <li>Wireless gaming mouse</li>
+        <li>Hot-swappable mechanical keyboard</li>
+        <li>Bookshelf speakers</li>
+        <li>Under-desk cable tray</li>
+        <li>Bias lighting behind monitor</li>
+        <li>Floating shelf or wall decor</li>
+      </ul>
+      <p>
+        At this level, your setup looks high-end.
+        Clean lighting, premium feel, and perfect organization.
+      </p>
+    </div>
+  </div>
+
+  <!-- WHY BUDGET DOESN'T MATTER -->
+  <div class="reason-card">
+    <button class="reason-btn">Why Budget Doesn't Matter</button>
+    <div class="reason-content">
+      <p>
+        A good setup is about organization, color matching,
+        and clean cable management. Even a simple desk can look amazing
+        if it’s tidy and thoughtfully designed.
+      </p>
+    </div>
+  </div>
+
 </section>
 
 <footer>
-    © 2026 Perfect Desk Designs | Clean. Simple. Functional.
+  Designed to help you build something awesome at any budget 🚀
 </footer>
+
+<script>
+const buttons = document.querySelectorAll(".reason-btn");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
 
 </body>
 </html>
