@@ -33,9 +33,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+  background: linear-gradient(to bottom, #ffffff, #e2e8f0);
 }
 
 .hero h1 {
@@ -96,10 +95,11 @@ section {
   transform: translateY(-3px);
 }
 
-/* FULL PAGE REASON */
+/* FULL REASON */
 .full-reason {
   display: none;
   animation: fadeIn 0.6s ease forwards;
+  text-align: center;
 }
 
 .full-reason h2 {
@@ -111,6 +111,8 @@ section {
   font-size: 18px;
   line-height: 1.8;
   color: #475569;
+  max-width: 800px;
+  margin: auto;
 }
 
 .back-btn {
@@ -127,32 +129,54 @@ section {
   opacity: 0.85;
 }
 
-/* PRICING */
+/* BUDGET */
 .pricing {
   text-align: center;
 }
 
-select {
+.budget-input {
   margin-top: 30px;
+}
+
+.budget-input input {
   padding: 12px;
   font-size: 16px;
+  width: 200px;
   border-radius: 8px;
   border: 1px solid #cbd5e1;
 }
 
-.pricing-info {
-  margin-top: 25px;
-  font-size: 18px;
-  color: #475569;
-  line-height: 1.7;
+.budget-input button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
 }
 
-/* CONTACT SECTION */
+.budget-input button:hover {
+  opacity: 0.9;
+}
+
+.pricing-info {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CONTACT */
 .contact {
   text-align: center;
   background: #0f172a;
   color: white;
-  border-radius: 16px;
+  border-radius: 20px;
+  padding: 80px 30px;
 }
 
 .contact h2 {
@@ -168,24 +192,17 @@ select {
 
 .contact a {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 15px 30px;
   background: white;
   color: #0f172a;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: 0.3s;
 }
 
 .contact a:hover {
-  background: #e2e8f0;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #64748b;
+  transform: translateY(-3px);
 }
 
 @keyframes fadeIn {
@@ -205,16 +222,15 @@ footer {
 <section class="why">
   <h2>Why Choose This Service?</h2>
   <p>
-    Your workspace affects how you think, how you focus, and how you perform.
-    A well-designed desk setup reduces distractions, improves comfort,
-    and creates an environment where your best work can happen.
-    This service helps you build that environment with intention and clarity.
+    Your workspace affects your mindset, energy, and performance.
+    A properly designed desk setup removes distractions, improves comfort,
+    and creates a professional environment that supports serious work.
+    We design spaces that feel intentional, structured, and motivating.
   </p>
 </section>
 
 <section class="reasons" id="reasonSection">
   <h2>What We Focus On</h2>
-
   <div class="reason-buttons">
     <button onclick="openReason(1)">Clean & Organized Layout</button>
     <button onclick="openReason(2)">Functional & Comfortable Design</button>
@@ -224,42 +240,49 @@ footer {
 
 <section class="full-reason" id="full1">
   <h2>Clean & Organized Layout</h2>
-  <p>A cluttered desk creates mental clutter. We design layouts that prioritize clean lines, hidden cables, and intentional spacing so your workspace feels calm and structured.</p>
+  <p>
+    A cluttered desk creates mental noise. We design structured layouts that eliminate visual distractions,
+    hide cables, balance spacing, and give every object a clear purpose.
+  </p>
   <button class="back-btn" onclick="goBack()">Back</button>
 </section>
 
 <section class="full-reason" id="full2">
   <h2>Functional & Comfortable Design</h2>
-  <p>We focus on ergonomics, lighting, and layout flow to ensure your workspace supports long periods of focused work without strain or distraction.</p>
+  <p>
+    Comfort directly impacts performance. We optimize monitor height, lighting placement,
+    and overall ergonomics to reduce strain and fatigue.
+  </p>
   <button class="back-btn" onclick="goBack()">Back</button>
 </section>
 
 <section class="full-reason" id="full3">
   <h2>Intentional Aesthetic Choices</h2>
-  <p>We guide color coordination, lighting, and refined details so your desk looks cohesive, confident, and thoughtfully designed.</p>
+  <p>
+    Design influences confidence. We build cohesive visual themes using balanced colors
+    and refined materials to create a strong presence.
+  </p>
   <button class="back-btn" onclick="goBack()">Back</button>
 </section>
 
 <section class="pricing">
-  <h2>Investment Options</h2>
-  <select onchange="showPricing(this.value)">
-    <option value="">Select Budget Range</option>
-    <option value="low">$100–$300</option>
-    <option value="mid">$300–$500</option>
-    <option value="high">$500–$700</option>
-  </select>
+  <h2>Tell Us Your Budget</h2>
+  <div class="budget-input">
+    <input type="number" id="budgetValue" placeholder="Enter your budget ($)">
+    <button onclick="generatePlan()">See Recommendation</button>
+  </div>
   <div class="pricing-info" id="pricingInfo"></div>
 </section>
 
 <section class="contact">
-  <h2>Ready to Transform Your Workspace?</h2>
-  <p>Let’s design a desk setup that improves your focus and reflects your professionalism.</p>
-  <a href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Contact Now</a>
+  <h2>Ready to Improve Your Workspace?</h2>
+  <p>
+    Fill out the short form and receive a personalized desk design recommendation.
+  </p>
+  <a href="https://forms.gle/THVhWjgWjm1bWhYy9" target="_blank">
+    Get Started
+  </a>
 </section>
-
-<footer>
-  © 2026 Perfect Desk Design
-</footer>
 
 <script>
 function openReason(num) {
@@ -272,19 +295,26 @@ function openReason(num) {
 function goBack() {
   document.querySelectorAll(".full-reason").forEach(sec => sec.style.display = "none");
   document.getElementById("reasonSection").style.display = "block";
+  window.scrollTo(0, document.getElementById("reasonSection").offsetTop);
 }
 
-function showPricing(value) {
+function generatePlan() {
+  const budget = parseInt(document.getElementById("budgetValue").value);
   const info = document.getElementById("pricingInfo");
 
-  if (value === "low") {
-    info.innerHTML = "A minimal and clean workspace with essential components, focused on organization and simplicity.";
-  } else if (value === "mid") {
-    info.innerHTML = "An upgraded workspace with improved functionality, refined layout, and balanced visual design.";
-  } else if (value === "high") {
-    info.innerHTML = "A premium workspace with enhanced materials, optimized ergonomics, and elevated visual presence.";
-  } else {
-    info.innerHTML = "";
+  if (!budget || budget <= 0) {
+    info.innerHTML = "Please enter a valid budget amount.";
+    return;
+  }
+
+  if (budget < 300) {
+    info.innerHTML = "A clean and minimal workspace focused on organization, improved layout, and simple aesthetic upgrades.";
+  } 
+  else if (budget < 500) {
+    info.innerHTML = "A refined setup with better ergonomics, balanced lighting, stronger organization systems, and cohesive styling.";
+  } 
+  else {
+    info.innerHTML = "A premium-level workspace with upgraded materials, optimized ergonomics, and a powerful visual presence.";
   }
 }
 </script>
