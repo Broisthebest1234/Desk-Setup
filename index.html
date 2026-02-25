@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perfect Desk Design</title>
 
-<!-- FAVICON -->
 <link rel="icon" type="image/png" href="logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,50 +18,35 @@
 }
 
 body {
-  background: #f1f5f9;
+  background: #f8fafc;
   color: #0f172a;
   scroll-behavior: smooth;
 }
 
-/* TOP BRAND BAR */
-.brand-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  z-index: 1000;
-}
-
 section {
-  padding: 120px 20px;
-  max-width: 1000px;
+  padding: 100px 20px;
+  max-width: 900px;
   margin: auto;
 }
 
-/* HERO */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #e0f2fe);
+  background: linear-gradient(180deg, #ffffff, #e0f2fe);
 }
 
 .hero h1 {
   font-size: 56px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 20px;
-  opacity: 0.8;
+  color: #475569;
 }
 
 /* WHY */
@@ -78,77 +62,62 @@ section {
 .why p {
   font-size: 18px;
   line-height: 1.8;
-  max-width: 750px;
-  margin: auto;
   color: #334155;
 }
 
 /* REASONS */
-.reasons {
+.reasons h2 {
   text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
 }
 
-.reason-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 40px;
-}
-
-.reason-buttons button {
-  padding: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 14px;
-  border: none;
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
-  color: white;
-  cursor: pointer;
+.reason-item {
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
-.reason-buttons button:hover {
-  transform: translateY(-4px);
-  opacity: 0.9;
-}
-
-/* FULL REASON */
-.full-reason {
-  display: none;
-  animation: fadeIn 0.5s ease forwards;
-  text-align: center;
-}
-
-.full-reason h2 {
-  font-size: 34px;
-  margin-bottom: 25px;
-}
-
-.full-reason p {
+.reason-header {
+  padding: 20px;
   font-size: 18px;
-  line-height: 1.9;
-  color: #334155;
-  max-width: 800px;
-  margin: auto;
-}
-
-.back-btn {
-  margin-top: 40px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 10px;
-  background: #0f172a;
-  color: white;
+  font-weight: 600;
   cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
 }
 
-.back-btn:hover {
-  opacity: 0.85;
+.reason-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.4s ease;
+  padding: 0 20px;
+  background: white;
+}
+
+.reason-content p {
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* ACTIVE DROPDOWN */
+.reason-item.active .reason-content {
+  max-height: 500px;
+  padding: 0 20px 20px 20px;
 }
 
 /* BUDGET */
 .pricing {
   text-align: center;
+}
+
+.pricing h2 {
+  font-size: 32px;
 }
 
 .budget-input {
@@ -159,14 +128,14 @@ section {
   padding: 14px;
   font-size: 16px;
   width: 220px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #cbd5e1;
 }
 
 .budget-input button {
   padding: 14px 22px;
   margin-left: 10px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
   background: #2563eb;
   color: white;
@@ -180,20 +149,18 @@ section {
 .pricing-info {
   margin-top: 30px;
   font-size: 18px;
-  color: #334155;
   line-height: 1.8;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #334155;
 }
 
 /* CONTACT */
 .contact {
   text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
   color: white;
-  border-radius: 25px;
-  padding: 80px 30px;
+  border-radius: 20px;
 }
 
 .contact h2 {
@@ -202,14 +169,13 @@ section {
 }
 
 .contact p {
+  margin-bottom: 25px;
   font-size: 18px;
-  margin-bottom: 30px;
-  opacity: 0.9;
 }
 
 .contact a {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 14px 30px;
   background: white;
   color: #1e3a8a;
   text-decoration: none;
@@ -221,19 +187,10 @@ section {
 .contact a:hover {
   transform: translateY(-4px);
 }
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
 </style>
 </head>
 
 <body>
-
-<div class="brand-bar">
-  Perfect Desk Design
-</div>
 
 <section class="hero">
   <h1>Perfect Desk Design</h1>
@@ -243,73 +200,66 @@ section {
 <section class="why">
   <h2>Why Choose This Service?</h2>
   <p>
-    Your desk is where ideas become reality. A well-designed workspace increases focus,
-    reduces distractions, and creates an environment that supports serious work.
-    We design intentional setups that look refined and feel powerful.
+    Your desk is where ideas turn into results. A structured and intentional workspace
+    improves focus, reduces distractions, and creates a professional environment
+    that supports serious work.
   </p>
 </section>
 
-<section class="reasons" id="reasonSection">
+<section class="reasons">
   <h2>What We Focus On</h2>
-  <div class="reason-buttons">
-    <button onclick="openReason(1)">Clean & Organized Layout</button>
-    <button onclick="openReason(2)">Functional & Comfortable Design</button>
-    <button onclick="openReason(3)">Intentional Aesthetic Choices</button>
-    <button onclick="openReason(4)">Long-Term Productivity Strategy</button>
+
+  <div class="reason-item">
+    <div class="reason-header" onclick="toggleReason(this)">Clean & Organized Layout</div>
+    <div class="reason-content">
+      <p>We eliminate clutter, manage cables, and balance spacing so your desk feels structured and distraction-free. A clean setup improves mental clarity and workflow efficiency.</p>
+    </div>
   </div>
-</section>
 
-<section class="full-reason" id="full1">
-  <h2>Clean & Organized Layout</h2>
-  <p>We eliminate clutter, manage cables, and design balanced spacing so your desk feels structured and distraction-free.</p>
-  <button class="back-btn" onclick="goBack()">Back</button>
-</section>
+  <div class="reason-item">
+    <div class="reason-header" onclick="toggleReason(this)">Functional & Comfortable Design</div>
+    <div class="reason-content">
+      <p>We optimize ergonomics, lighting placement, and desk flow to reduce strain and allow long, focused sessions without discomfort.</p>
+    </div>
+  </div>
 
-<section class="full-reason" id="full2">
-  <h2>Functional & Comfortable Design</h2>
-  <p>We optimize ergonomics, lighting, and layout to support long work sessions without strain.</p>
-  <button class="back-btn" onclick="goBack()">Back</button>
-</section>
+  <div class="reason-item">
+    <div class="reason-header" onclick="toggleReason(this)">Intentional Aesthetic Choices</div>
+    <div class="reason-content">
+      <p>We build cohesive color schemes and refined details that elevate the visual presence of your workspace while maintaining professionalism.</p>
+    </div>
+  </div>
 
-<section class="full-reason" id="full3">
-  <h2>Intentional Aesthetic Choices</h2>
-  <p>We build cohesive color palettes and refined design details that elevate your workspace visually.</p>
-  <button class="back-btn" onclick="goBack()">Back</button>
-</section>
+  <div class="reason-item">
+    <div class="reason-header" onclick="toggleReason(this)">Long-Term Productivity Strategy</div>
+    <div class="reason-content">
+      <p>We design systems that grow with your needs, ensuring your setup remains efficient and adaptable over time.</p>
+    </div>
+  </div>
 
-<section class="full-reason" id="full4">
-  <h2>Long-Term Productivity Strategy</h2>
-  <p>We don’t just design for today. We create systems and layouts that grow with your needs and maintain efficiency over time.</p>
-  <button class="back-btn" onclick="goBack()">Back</button>
 </section>
 
 <section class="pricing">
   <h2>Tell Us Your Budget</h2>
+
   <div class="budget-input">
     <input type="number" id="budgetValue" placeholder="Enter your budget ($)">
     <button onclick="generatePlan()">See Recommendation</button>
   </div>
+
   <div class="pricing-info" id="pricingInfo"></div>
 </section>
 
 <section class="contact">
   <h2>Ready to Upgrade Your Desk?</h2>
-  <p>Fill out the short form and receive a personalized recommendation.</p>
+  <p>Fill out the short form and receive your personalized recommendation.</p>
   <a href="https://forms.gle/THVhWjgWjm1bWhYy9" target="_blank">Get Started</a>
 </section>
 
 <script>
-function openReason(num) {
-  document.getElementById("reasonSection").style.display = "none";
-  document.querySelectorAll(".full-reason").forEach(sec => sec.style.display = "none");
-  document.getElementById("full" + num).style.display = "block";
-  window.scrollTo(0, 0);
-}
-
-function goBack() {
-  document.querySelectorAll(".full-reason").forEach(sec => sec.style.display = "none");
-  document.getElementById("reasonSection").style.display = "block";
-  window.scrollTo(0, document.getElementById("reasonSection").offsetTop);
+function toggleReason(element) {
+  const item = element.parentElement;
+  item.classList.toggle("active");
 }
 
 function generatePlan() {
@@ -322,7 +272,7 @@ function generatePlan() {
   }
 
   if (budget < 300) {
-    info.innerHTML = "We will design a clean, minimal setup focused on layout improvements and strong organization.";
+    info.innerHTML = "We will design a clean and minimal setup focused on layout improvements and strong organization.";
   } 
   else if (budget < 600) {
     info.innerHTML = "We can refine ergonomics, upgrade materials, and create a cohesive premium look.";
